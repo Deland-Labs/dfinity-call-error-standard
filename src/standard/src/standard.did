@@ -1,0 +1,5 @@
+service:{
+  raiseError: (text) -> (bool);
+  setStorage: (principal) -> (bool);
+  getLastError: ()->(text) query;
+}

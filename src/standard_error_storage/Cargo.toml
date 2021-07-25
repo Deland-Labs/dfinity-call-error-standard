@@ -1,0 +1,16 @@
+[package]
+name = "standard_error_storage"
+version = "0.1.0"
+edition = "2018"
+
+[lib] 
+crate-type = ["cdylib"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ic-cdk = "0.3"
+ic-cdk-macros = "0.3"
+candid = "0.6.19"
+chrono = "0.4"
+

@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "standard": {
+      "build": "cargo build --target wasm32-unknown-unknown --package  standard --release",
+      "candid": "src/standard/src/standard.did",
+      "wasm": "target/wasm32-unknown-unknown/release/standard.wasm",
+      "type": "custom"
+    },
+    "standard_error_storage": {
+      "build": "cargo build --target wasm32-unknown-unknown --package  standard_error_storage --release",
+      "candid": "src/standard_error_storage/src/storage.did",
+      "wasm": "target/wasm32-unknown-unknown/release/standard_error_storage.wasm",
+      "type": "custom"
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": ""
+    }
+  },
+  "dfx": "0.7.2",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}

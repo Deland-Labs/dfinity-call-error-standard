@@ -1,0 +1,4 @@
+service:{
+  saveError: (principal,text) -> (bool);
+  getLastError: (principal)->(text) query;
+}
