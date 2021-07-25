@@ -1,4 +1,4 @@
-use candid::{candid_method, CandidType};
+use candid::candid_method;
 use chrono::prelude::*;
 use ic_cdk::{api, export::Principal, storage};
 use ic_cdk_macros::*;
@@ -69,5 +69,5 @@ fn clear_expired_error() {
     let crt_time = api::time();
     let crt_storage_timestamp = get_storage_timestamp(crt_time);
     let errors = storage::get_mut::<Errors>();
-    errors.retain(|key, value| key >= &crt_storage_timestamp);
+    errors.retain(|key, _| key >= &crt_storage_timestamp);
 }
