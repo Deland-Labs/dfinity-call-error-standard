@@ -11,8 +11,12 @@ Canister update call:
  ## Solution
 
 The update call only needs to design the return value under the correct execution. If an exception occurs, Canister returns the response error message through the getLastError method to help the developer locate the problem.
-Throwing an exception will restore the status update, a storage canister is needed to save the error message.
 
+```
+service:{
+  getLastError: ()->(text) query;
+}
+```
 
 ## Example 
    You can test it with the following command :

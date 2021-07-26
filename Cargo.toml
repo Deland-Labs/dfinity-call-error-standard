@@ -1,6 +1,5 @@
 
 [workspace]
 members = [
-    "src/standard",
-    "src/standard_error_storage"
+    "src/standard"
 ]
