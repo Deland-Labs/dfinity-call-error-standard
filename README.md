@@ -22,9 +22,7 @@ service:{
    You can test it with the following command :
    
    ```
-      dfx deploy  --no-wallet
-      
-      dfx canister call standard setStorage '(principal "standard_error_storage")' 
+      dfx deploy  --no-wallet      
 
       dfx canister call standard raiseError "error code 123123,and the error details is xxxxxx"
 
