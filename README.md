@@ -1,3 +1,20 @@
+# DOT NOT USE IT
+
+Please do not use it !
+
+assert! can not revert state updated before any outside call
+
+```
+
+  dfx deploy  --no-wallet      
+
+  dfx canister call standard raiseError "error code 123123,and the error details is xxxxxx"
+
+  dfx canister call standard getValue  // (1)
+
+  dfx canister call stardard getValue2 // (0)
+```
+
 # Dfinity Call Error Standard
 
 ## Overview

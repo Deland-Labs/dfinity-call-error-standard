@@ -5,6 +5,7 @@ use ic_cdk_macros::*;
 use std::collections::HashMap;
 
 static mut TEST_VALUE: u64 = 0;
+static mut TEST_VALUE_2: u64 = 0;
 static mut OWNER: Principal = Principal::anonymous();
 
 // timestamp call_principal,error_msg
@@ -35,6 +36,8 @@ async fn test_raise_error(err_msg: String) -> bool {
             Ok(_) => ic_cdk::print("save_error storage executed succeed"),
             _ => ic_cdk::print("save_error storage executed failed"),
         };
+
+        TEST_VALUE_2 += 1;
     }
 
     assert!(false, "raise error");
@@ -88,6 +91,18 @@ fn get_last_error() -> String {
         },
         _ => "".to_string(),
     }
+}
+
+#[query(name = "getValue")]
+#[candid_method(query, rename = "getValue")]
+async fn get_value() -> u64 {
+    unsafe { TEST_VALUE }
+}
+
+#[query(name = "getValue2")]
+#[candid_method(query, rename = "getValue2")]
+async fn get_value2() -> u64 {
+    unsafe { TEST_VALUE_2 }
 }
 
 fn get_storage_timestamp(crt_time: u64) -> u64 {
