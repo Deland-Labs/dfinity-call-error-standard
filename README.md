@@ -1,8 +1,8 @@
-# DOT NOT USE IT
+# DOT NOT do IT
 
-Please do not use it !
+Please do not do it !
 
-assert! can not revert state updated before any outside call
+assert!() can not revert state updated before any outside call.
 
 ```
 
@@ -22,7 +22,7 @@ assert! can not revert state updated before any outside call
 Canister update call:
   + you can revert state update by throw an exception,  that means the error message cannot be returned. 
   + If you want to return a error message , the state updated cannot be revert automatically. 
- 
+
  The returned error message can help developers locate the problem and find a solution quickly. There should be a new error return method to balance these problems.
 
  ## Solution
@@ -37,7 +37,7 @@ service:{
 
 ## Example 
    You can test it with the following command :
-   
+
    ```
       dfx deploy  --no-wallet      
 
@@ -50,6 +50,6 @@ service:{
 
    We are from ICP Deland team. 
 
-   We are building a decentralized exchange based on Dfinity with  OpenOrder-Protocol.
+   We are building a decentralized exchange based on Dfinity with Open Order Protocol.
 
    Offcial Website : [https://deland.one](https://deland.one)
