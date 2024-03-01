@@ -9,6 +9,6 @@ crate-type = ["cdylib"]
 
 [dependencies]
 ic-cdk = "0.3"
-ic-cdk-macros = "0.3"
+ic-cdk-macros = "0.9"
 candid = "0.6.19"
 chrono = "0.4"
