@@ -8,7 +8,7 @@ edition = "2018"
 crate-type = ["cdylib"]
 
 [dependencies]
-ic-cdk = "0.3"
+ic-cdk = "0.13"
 ic-cdk-macros = "0.3"
 candid = "0.6.19"
 chrono = "0.4"
